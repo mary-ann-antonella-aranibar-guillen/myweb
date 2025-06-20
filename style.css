@@ -1,61 +1,76 @@
-/* Fondo con animación tipo partículas suaves */
+/* Fondo animado con partículas flotantes tipo nubes */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #eaf6f1;
-  position: relative;
   color: #222;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .background-animation {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(200,255,230,0.3) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background: radial-gradient(circle, rgba(200,255,230,0.15) 2px, transparent 2px);
+  background-size: 60px 60px;
+  animation: float 40s linear infinite;
   z-index: -1;
-  animation: shimmer 30s linear infinite;
+  opacity: 0.4;
 }
 
-@keyframes shimmer {
+@keyframes float {
   0% { background-position: 0 0; }
-  100% { background-position: 100px 100px; }
+  100% { background-position: 200px 200px; }
 }
 
+/* Contenedor centrado con más margen */
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 15px;
+  max-width: 850px;
+  margin: 80px auto;
+  padding: 80px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 25px;
 }
 
+/* Secciones espaciadas */
 header, section, footer {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
+/* Título con animación al pasar el mouse */
 h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   color: #157a6e;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
+h1:hover {
+  transform: scale(1.07);
+  color: #199e88;
+  text-shadow: 0 0 10px rgba(21,122,110,0.3);
+}
+
+/* Títulos con icono de flor */
 h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.6em;
+  margin-bottom: 15px;
   color: #157a6e;
   display: flex;
   align-items: center;
 }
 
-.icon {
+h2::before {
+  content: "🌸";
   margin-right: 10px;
 }
 
+/* Listas */
 ul {
   list-style: disc;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 a {
@@ -67,6 +82,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Pie de página */
 footer {
   text-align: center;
   font-size: 0.9em;
