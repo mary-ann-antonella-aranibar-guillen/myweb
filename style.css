@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color: #eaf6f1;
   color: #222;
   position: relative;
@@ -26,7 +26,7 @@ body {
 header, section, footer {
   margin-bottom: 50px;
   padding: 25px 30px;
-  background-color: #f7fdfc;
+  background-color: #aefff1;
   border-radius: 20px;
   box-shadow: 0 0 8px rgba(0,0,0,0.03);
 }
@@ -69,7 +69,7 @@ h1:hover {
 h2 {
   font-size: 1.6em;
   margin-bottom: 15px;
-  color: #157a6e;
+  color: #2aa194;
   display: flex;
   align-items: center;
 }
