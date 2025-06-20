@@ -1,59 +1,71 @@
-/* Fondo animado con partículas flotantes tipo nubes */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #eaf6f1;
   color: #222;
-  overflow-x: hidden;
   position: relative;
+  overflow-x: hidden;
 }
 
-.background-animation {
+#tsparticles {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(200,255,230,0.15) 2px, transparent 2px);
-  background-size: 60px 60px;
-  animation: float 40s linear infinite;
   z-index: -1;
-  opacity: 0.4;
 }
 
-@keyframes float {
-  0% { background-position: 0 0; }
-  100% { background-position: 200px 200px; }
-}
-
-/* Contenedor centrado con más margen */
 .container {
   max-width: 850px;
-  margin: 80px auto;
-  padding: 80px;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin: 100px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 0 25px rgba(0,0,0,0.08);
   border-radius: 25px;
 }
 
-/* Secciones espaciadas */
 header, section, footer {
   margin-bottom: 50px;
+  padding: 25px 30px;
+  background-color: #f7fdfc;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.03);
 }
 
-/* Título con animación al pasar el mouse */
 h1 {
   font-size: 3em;
   color: #157a6e;
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 h1:hover {
-  transform: scale(1.07);
-  color: #199e88;
+  transform: scale(1.08);
+  color: #1e9d88;
   text-shadow: 0 0 10px rgba(21,122,110,0.3);
 }
 
-/* Títulos con icono de flor */
+.subtitulo {
+  text-align: center;
+  font-size: 1.2em;
+  color: #199e88;
+  margin-top: -15px;
+  margin-bottom: 25px;
+  font-style: italic;
+  animation: aparecer 2s ease forwards;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 h2 {
   font-size: 1.6em;
   margin-bottom: 15px;
@@ -67,7 +79,6 @@ h2::before {
   margin-right: 10px;
 }
 
-/* Listas */
 ul {
   list-style: disc;
   margin-left: 30px;
@@ -82,7 +93,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Pie de página */
 footer {
   text-align: center;
   font-size: 0.9em;

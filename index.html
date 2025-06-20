@@ -3,26 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mary Ann Aranibar - CV</title>
+  <title>Mary Ann Antonella Aranibar Guillén - CV</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  <div class="background-animation"></div>
+  <div id="tsparticles"></div>
+
   <div class="container">
     <header>
       <h1>Mary Ann Antonella Aranibar Guillén</h1>
-      <p>Estudiante de Ingeniería Industrial</p>
+      <p class="subtitulo">Estudiante de Ingeniería Industrial</p>
     </header>
 
-    <section class="descripcion">
-      <h2><span class="icon">🌸</span> Breve Descripción Personal</h2>
+    <section>
+      <h2>Breve Descripción Personal</h2>
       <p>
-        Soy estudiante de tercer año de Ingeniería Industrial, cursando la carrera desde 2023 en la ciudad de Arequipa, Perú. Durante mi formación académica he descubierto una fuerte vocación por la mejora continua, la optimización de procesos y la gestión eficiente de recursos, aspectos fundamentales para impulsar la competitividad y sostenibilidad en las organizaciones. Me motiva aplicar mis conocimientos en contextos reales, buscando siempre soluciones prácticas y con impacto positivo. Más allá de lo académico, el deporte forma parte importante de mi vida, ya que me ayuda a fortalecer la disciplina y mantener un enfoque constante como lo es mi caso, la natación.
+        Soy estudiante de tercer año de Ingeniería Industrial, cursando la carrera desde 2023 en la ciudad de Arequipa, Perú.
+        Durante mi formación académica he descubierto una fuerte vocación por la mejora continua, la optimización de procesos y
+        la gestión eficiente de recursos, aspectos fundamentales para impulsar la competitividad y sostenibilidad en las organizaciones.
+        Me motiva aplicar mis conocimientos en contextos reales, buscando siempre soluciones prácticas y con impacto positivo.
+        Más allá de lo académico, el deporte forma parte importante de mi vida, ya que me ayuda a fortalecer la disciplina y
+        mantener un enfoque constante como lo es mi caso, la natación.
       </p>
     </section>
 
-    <section class="intereses">
-      <h2><span class="icon">🌸</span> Intereses</h2>
+    <section>
+      <h2>Intereses</h2>
       <ul>
         <li>Mejora continua de procesos</li>
         <li>Planeamiento y control de la producción</li>
@@ -30,10 +37,10 @@
       </ul>
     </section>
 
-    <section class="contacto">
-      <h2><span class="icon">🌸</span> Contactos</h2>
+    <section>
+      <h2>Contactos</h2>
       <ul>
-        <li>Email: mary.aranibar@ucsp.edu.pe</li>
+        <li>Email: <a href="mailto:mary.aranibar@ucsp.edu.pe">mary.aranibar@ucsp.edu.pe</a></li>
         <li><a href="#">GitHub</a></li>
         <li><a href="#">LinkedIn</a></li>
         <li><a href="#">Instagram</a></li>
@@ -41,13 +48,13 @@
       </ul>
     </section>
 
-    <section class="carrera">
-      <h2><span class="icon">🌸</span> Carrera</h2>
+    <section>
+      <h2>Carrera</h2>
       <p>Estudio la carrera de Ingeniería Industrial en la Universidad Católica San Pablo.</p>
     </section>
 
-    <section class="cursos">
-      <h2><span class="icon">🌸</span> Cursos</h2>
+    <section>
+      <h2>Cursos</h2>
       <ul>
         <li><a href="https://ucsp.edu.pe/publicaciones/guia-de-problemas-de-quimica-i/">QUÍMICA II</a></li>
         <li>Fundamentos de la Informática</li>
@@ -57,16 +64,16 @@
       </ul>
     </section>
 
-    <section class="docentes">
-      <h2><span class="icon">🌸</span> Docentes</h2>
+    <section>
+      <h2>Docentes</h2>
       <ul>
-        <li><a href="https://www.linkedin.com/in/ecuadrosv/?trk=recent-searches" target="_blank">Ernesto Cuadros-Vargas</a></li>
-        <li><a href="https://www.linkedin.com/in/miriam-berr%C3%ADos-garaycochea-b1748528/" target="_blank">Miriam Berríos Garaycochea</a></li>
+        <li><a href="https://www.linkedin.com/in/ecuadrosv/?trk=recent-searches">Ernesto Cuadros-Vargas</a></li>
+        <li><a href="https://www.linkedin.com/in/miriam-berr%C3%ADos-garaycochea-b1748528/">Miriam Berríos Garaycochea</a></li>
       </ul>
     </section>
 
-    <section class="companeros">
-      <h2><span class="icon">🌸</span> Compañeros</h2>
+    <section>
+      <h2>Compañeros</h2>
       <ul>
         <li><a href="https://emilycondorih.github.io/">Emily Silva Ruiz</a></li>
         <li><a href="https://kleiver-kerwin-salas-chavez.github.io/primerapagina/">Kleiver Salas Chávez</a></li>
@@ -79,5 +86,23 @@
       <p>© 2025 Mary Ann Antonella Aranibar Guillén</p>
     </footer>
   </div>
+
+  <script>
+    tsParticles.load("tsparticles", {
+      background: { color: { value: "#eaf6f1" } },
+      particles: {
+        number: { value: 40 },
+        color: { value: "#b2f2e5" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 4 },
+        move: { enable: true, speed: 1 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } },
+        modes: { repulse: { distance: 50 } }
+      }
+    });
+  </script>
 </body>
 </html>
